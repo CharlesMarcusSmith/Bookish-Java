@@ -58,3 +58,47 @@ Ubuntu users try `sudo systemctl enable postgresql.service`
 1. Inside your `PostgreSQL` server, right-click on *Databases* and create a new Database with the name `bookish` and the owner `bookish` (both in the General tab).
 
 2. Click `Save` to create the database.
+
+
+
+SPIRNG NOTES:
+Is an application framework, typically used to build the start point for us.
+
+Spring Boot is all about the rapid production of projects, create quickly, without configuration.
+Will allow us to create and configure a program that will have API capabilities.
+
+Bean: a managed object, requiring classes.
+@RestController is an example of a bean
+^ Rest as in a REST API.
+
+Inversion of control, contrtol of the framework is given to the framework.
+
+@Repository - tells spring that this class is used for data access, which is the component of our API that interacts with the database.
+@ Service - this will be responsible for business logic, and seperated for ease of config managing?
+^! FYI We didnt use this in our project, but in my Hotel-Project you can see how its used if curious, it just seperated functionality from controller
+   into another class for coding principle reasons, it's just good practice but not absolutely neccessary while learning.
+@Controller (@Controller & @ RestController) - used for request handling, listening for requests (potentially multiple), any requests the API needs to be handled need ot be in this class.
+   ^ A @RestController is for incoming and outgoing JSON format data.
+@Entity - Classes that we wil create - these should match tables, and using getters and setters like normal, which are for the columns of our table.
+^ Entities are used to store records as objects, and using beans (@) we can tell Java how to interact with the database based of this.
+^ For example Primary Keys are listed here, and in my BookAuth and BookAuthPK we have listen how the forien keys.
+^ The data types must match / be compatible with the data types in our database, for example I have used the Date type in Java as it matches the format of the date type in SQL.
+^ ! Important thing to note about Entities is they typically must have a primary key; 
+that is why when I was making my conjunction (BookAuth) entity containing two foreign keys, I had to make a second Entity class which combined the two foreign keys of the tables listed,
+and combine them in the BookAuthPK Entity class to make a new primary key, which was then passed into the BookAuth Entity class.
+
+See the book classes and BookAuth classes for notes,
+
+
+
+
+
+
+
+
+
+
+
+
+
+
