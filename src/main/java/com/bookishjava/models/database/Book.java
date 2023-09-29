@@ -2,10 +2,15 @@ package com.bookishjava.models.database;
 
 import jakarta.persistence.*;
 
+import java.util.Date;
+
 @Entity
 public class Book {
     private @Id @GeneratedValue(strategy = GenerationType.IDENTITY) Long id;
     private String title;
+    private String isbn;
+    @Column(name = "published_date")
+    private Date publishedDate;
 
     public Long getId() {
         return id;
@@ -18,6 +23,22 @@ public class Book {
     }
     public void setTitle(String title) {
         this.title = title;
+    }
+
+    public String getIsbn() {
+        return isbn;
+    }
+
+    public void setIsbn(String isbn) {
+        this.isbn = isbn;
+    }
+
+    public Date getPublishedDate() {
+        return publishedDate;
+    }
+
+    public void setPublished_date(Date publishedDate) {
+        this.publishedDate = publishedDate;
     }
 
     @Override
