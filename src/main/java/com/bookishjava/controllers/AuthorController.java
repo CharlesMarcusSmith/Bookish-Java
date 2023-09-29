@@ -12,7 +12,6 @@ import com.bookishjava.repositories.AuthorRepository;
 
 @RestController
 public class AuthorController {
-
     private final AuthorRepository repository;
 
     AuthorController(AuthorRepository repository){
