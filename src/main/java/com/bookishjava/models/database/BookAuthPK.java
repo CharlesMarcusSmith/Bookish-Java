@@ -15,7 +15,6 @@ public class BookAuthPK{
     private Book book;              // As this is a conjunction table we will have to do this for Author too on line 10
                                     // instead of @Column.
 
-    
     // This is just returning the primary key, not the related Author Entity object.
     // This is however unfinished as mentioned, I have left it in here to show how Spring is being used to magically
     // return the book object below.
