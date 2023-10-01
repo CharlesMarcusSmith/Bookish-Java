@@ -12,12 +12,12 @@ public class BookAuth {
     //Getter and setters: These are retrieved from the table in the Book
 
     // See BookAuthPK for notes about this (it's unfinished):
-    public int getAuthorId() {
-        return id.getAuthorId();
+    public Author getAuthor() {
+        return id.getAuthor();
     }
     // See BookAuthPK for notes about this (its unfinished):
-    public void setAuthorId(int authorId) {
-        id.setAuthorId(authorId);
+    public void setAuthor(Author author) {
+        id.setAuthor(author);
     }
 
     public Book getBook() {
