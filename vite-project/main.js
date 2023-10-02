@@ -1,18 +1,15 @@
 import './style.css'
 
 document.querySelector('#app').innerHTML = `
-  <div>
-    <h1>Bookish Frontend!</h1>
-    <p class="im-scared">
-      This is my first time doing a frontend :@
-    </p>
-  </div>
-  <div>
-    <p>
-        Now to list all the books in the library:
-
-    </p>
-  </div>
+   <div id="back-panel">
+        <div id="content">
+            <div id=hs><h1>Bookish Frontend</h1></div>
+            <p class="im-scared">
+              <h2>All the books in the library:</h2>
+              <div id = "bookdata" >  </div>
+            </p>
+        </div>
+   </div>
 `
 
 function setupAllBooks() {
