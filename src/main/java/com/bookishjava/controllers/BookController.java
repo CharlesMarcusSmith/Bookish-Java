@@ -3,9 +3,12 @@ package com.bookishjava.controllers;
 import java.util.List;
 import com.bookishjava.models.database.Book;
 import com.bookishjava.repositories.BookRepository;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+
+@CrossOrigin(origins = "http://localhost:5173")
 @RestController // Telling Spring this is a RestController using the bean.
 public class BookController {
     // Initiating and calling BookRepository method as 'repository', same as calling String stringName...
